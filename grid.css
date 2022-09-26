@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  padding: 78px 32px;
+}
+
+.content {
+  display: grid;
+  justify-content: center;
+}
+
+.title-1 {
+  font-style: normal;
+  font-weight: 275;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.166667px;
+  color: #4D4F62;
+  text-align: center;
+}
+
+.title-2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: 0.166667px;
+  color: #4D4F62;
+  margin-bottom: 16px;
+}
+
+.title-desc {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.104167px;
+  color: #4D4F62;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+.content {
+  margin-top: 76px;
+  gap: 25px;
+}
+
+.supervisor,
+.builder,
+.karma,
+.calculator {
+  width: 311px;
+  height: 222px;
+  background: #FFFFFF;
+  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+  border-radius: 8px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  border-top: solid #44D3D2 4px;
+}
+
+.builder {
+  border-top: solid #EA5454 4px;
+}
+
+.karma {
+  border-top: solid #FCAE4A 4px;
+}
+.calculator {
+  border-top: solid #549EF2 4px;
+}
+
+.supervisor h3,
+.builder h3,
+.karma h3,
+.calculator h3 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #4D4F62;
+}
+
+.supervisor p,
+.builder p,
+.karma p,
+.calculator p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 23px;
+  letter-spacing: 0.0902778px;
+  color: #4D4F62;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+.supervisor div,
+.builder div,
+.karma div,
+.calculator div {
+  margin-top: 33px;
+  width: 64px;
+  height: 64px;
+  /* display: none; */
+  background: url('./images/icon-supervisor.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-self: flex-end;
+}
+
+.builder div {
+  background: url('./images/icon-team-builder.svg');
+}
+
+.karma div {
+  background: url('./images/icon-karma.svg');
+}
+
+.calculator div {
+  background: url('./images/icon-calculator.svg');
+}
+
+@media (min-width: 40rem) {
+  .content{
+    grid-template-columns: auto auto auto;
+    grid-template-areas: "supervisor builder calculator"
+                         "supervisor karma calculator";
+    align-items: center;
+  }
+  .supervisor {
+    grid-area: supervisor;
+  }
+  .builder {  
+    grid-area: builder;
+  }
+  .karma {
+    grid-area: karma;
+  }
+  .calculator {
+    grid-area: calculator;
+  }
+}
